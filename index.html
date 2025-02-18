@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Parsear entidades Arkham para Dune</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <h1>Parsear entidades Arkham para Dune</h1>
+
+  <div class="main-container">
+    <!-- Panel Izquierdo: selección de archivo y lista de entidades -->
+    <div class="left-panel">
+      <div class="file-input-container">
+        <label for="jsonFile">Selecciona un archivo .json:</label>
+        <input type="file" id="jsonFile" accept=".json" />
+      </div>
+
+      <button id="selectAllBtn" disabled>Seleccionar todo</button>
+      <div id="entitiesContainer"></div>
+
+      <button id="processBtn" disabled>Procesar</button>
+    </div>
+
+    <!-- Panel Derecho: salidas EVM, Solana y Todas -->
+    <div class="right-panel">
+      <!-- Salida EVM -->
+      <div class="output-section">
+        <h2>Direcciones EVM</h2>
+        <button id="copyEvmBtn" class="copy-btn">Copiar</button>
+        <div id="evmOutput"></div>
+      </div>
+
+      <!-- Salida Solana -->
+      <div class="output-section">
+        <h2>Direcciones Solana</h2>
+        <button id="copySolanaBtn" class="copy-btn">Copiar</button>
+        <div id="solanaOutput"></div>
+      </div>
+
+      <!-- Salida Todas (EVM + Solana) -->
+      <div class="output-section">
+        <h2>Todas las direcciones</h2>
+        <button id="copyAllBtn" class="copy-btn">Copiar</button>
+        <div id="allOutput"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

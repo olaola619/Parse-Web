@@ -1,0 +1,109 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #fafafa;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .file-input-container {
+    margin-bottom: 20px;
+  }
+  
+  .main-container {
+    display: flex;
+    gap: 20px; /* Espacio entre columnas */
+    margin: 0 auto;  /* Centra horizontalmente */
+    max-width: 900px; /* Opcional: evita que se expanda demasiado */
+  }
+  
+  /* Panel izquierdo (entrada de archivo y lista de entidades) */
+  .left-panel {
+    flex: 1;
+    max-width: 350px;
+  }
+  
+  /* Listado de entidades */
+  #entitiesContainer {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-height: 300px; 
+    overflow-y: auto;  /* scroll vertical si sobrepasa la altura */
+    margin-bottom: 20px;
+  }
+  
+  .entity-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .entity-item label {
+    margin-left: 8px;
+  }
+  
+  /* Botón procesar */
+  #processBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Panel derecho (salidas EVM y Solana) */
+  .right-panel {
+    flex: 2; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .output-section {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: relative; 
+    max-width: 500px; /* Ancho máximo del bloque de salida */
+  }
+  
+  /* Títulos en las secciones de salida */
+  .output-section h2 {
+    margin-top: 0;
+  }
+  
+  /* Botón de copiar */
+  .copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+  
+  /* Contenedor donde se escribe el resultado */
+  #evmOutput,
+  #solanaOutput,
+  #allOutput {
+    margin-top: 30px;   /* Dejamos hueco para el botón de copiar */
+    width: 100%;        /* Ancho total del contenedor */
+    max-height: 150px;  /* Altura máxima */
+    overflow-y: auto;   /* Scroll vertical si el contenido es muy largo */
+  
+    /* Para que el texto pase a la siguiente línea en caso de ser muy largo */
+    white-space: normal;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+  }
+
+  #selectAllBtn {
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
