@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Parsear entidades Arkham para Dune</title>
+  <title>Arkham entities parser</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <h1>Parsear entidades Arkham para Dune</h1>
+  <h1>Parsear entidades arkham para Dune</h1>
 
   <div class="main-container">
-    <!-- Panel Izquierdo: selección de archivo y lista de entidades -->
+    <!-- Panel Izquierdo -->
     <div class="left-panel">
       <div class="file-input-container">
         <label for="jsonFile">Selecciona un archivo .json:</label>
@@ -22,8 +22,8 @@
       <button id="processBtn" disabled>Procesar</button>
     </div>
 
-    <!-- Panel Derecho: salidas EVM, Solana y Todas -->
-    <div class="right-panel">
+    <!-- Panel Central (las 3 salidas) -->
+    <div class="center-panel">
       <!-- Salida EVM -->
       <div class="output-section">
         <h2>Direcciones EVM</h2>
@@ -44,7 +44,21 @@
         <button id="copyAllBtn" class="copy-btn">Copiar</button>
         <div id="allOutput"></div>
       </div>
+    </div>
 
+    <!-- Panel Derecho (explicación + imagen) -->
+    <div class="help-panel">
+      <h2>¿Cómo sacar el fichero .json?</h2>
+      <p>
+        Nos vamos a la parte de “Private Labels” en arkham.  
+        Abrimos las DevTools con F12, luego nos vamos a la parte de Network y filtramos por “Fetch/XHR”.  
+        Sin cerrar las devtools, actualizamos la página de “Private Labels” y veréis que aparecen varias líneas.  
+        Seleccionamos la que pone <strong>entities</strong> y vamos a <strong>Response</strong>:  
+        aquí es donde salen todas nuestras entidades y wallets.  
+        Solo queda copiar todo lo de response, pegarlo en un bloc de notas y guardarlo como un fichero con el nombre que queráis .json.  
+        Ese es el que habrá que seleccionar en la web.
+      </p>
+      <img src="./Entities.png" alt="Explicación DevTools" class="help-img" />
     </div>
   </div>
 
